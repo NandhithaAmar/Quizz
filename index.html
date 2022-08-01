@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>Login</title>
+    <script src="https://use.fontawesome.com/8dd48a58d0.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+
+        <div class="card p-5">
+                  
+            <div class="items">
+                <h2 id="title">Login</h2>
+                <form action="index2.html">
+                    <input type="text" id="form-text" placeholder="Username" required autocomplete="off" />
+                    <input type="password" id="form-password" placeholder="Password" required autocomplete="off" />
+                
+                    <button type="submit" onclick="return myFunction();" class="w-100" id="button">Login</button>
+                </form>
+                <p class="or text-center mt-4">or</p>
+    
+                <div class="row text-center">
+                    <a href="index2.html"><img src="fb.jpg" class="img img-fluid"></a>
+                    <a href="index2.html"><img src="github.png" class="img img-fluid"></a>
+                    <a href="index2.html"><img src="twit.jpg" class="img img-fluid"></a>
+                </div>
+            </div>
+        </div>
+
+      </div>
+
+      <script>
+        function myFunction(){
+            var name = document.getElementById("form-text").value;
+            var password = document.getElementById("form-password").value;
+            if(name !== "" && password !== ""){
+                if (name == "Nandhitha" && password == "12345"){
+                    return true;
+                }
+                else{
+                    alert("Incorrect Login Credentials!!");
+                    document.location.reload();
+                    return false;
+                }
+            }
+        }
+      </script>
+</body>
+</html>
